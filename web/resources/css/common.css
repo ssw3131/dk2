@@ -1,0 +1,297 @@
+/*import-----------------------------------------------------------------------------------*/
+
+@import url('reset.css');
+@import url('font.css');
+
+/*basic-----------------------------------------------------------------------------------*/
+
+html,
+body {
+  font-size: 12px;
+  color: #222222;
+  font-family: 'NanumSquare', Dotum, sans-serif;
+}
+html {
+  height: 100%;
+}
+body {}
+a:active,
+a:link,
+a:visited {
+  color: #222222;
+  text-decoration: none;
+}
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+* {
+  box-sizing: border-box;
+}
+img {
+  vertical-align: top;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.bt_alpha {
+  display: block;
+  position: absolute;
+  background: url('/resources/img/common/bt_alpha.png') rgba(0, 0, 0, 0);
+}
+.wrap_center {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/*wrap-----------------------------------------------------------------------------------*/
+
+#wrap {
+  position: relative;
+  min-width: 1200px;
+  min-height: 770px;
+}
+
+/*footer-----------------------------------------------------------------------------------*/
+
+#footer {
+  border-top: 1px solid #e6e6e6;
+}
+#footer .wrap_center {
+  position: relative;
+}
+#footer .img {
+  display: block;
+  padding: 22px 0 37px;
+}
+#footer .top {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 27px;
+}
+#footer.footer_main {
+  position: absolute;
+  width: 100%;
+  bottom: 50px;
+  border-width: 0;
+  z-index: 10;
+}
+#footer.footer_main .wrap_footer {
+  position: relative;
+  width: calc(100% - 100px);
+  margin: 0 auto;
+}
+#footer.footer_main .wrap_footer .img0 {
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+#footer.footer_main .wrap_footer .img1 {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/*container-----------------------------------------------------------------------------------*/
+
+#container {}
+
+/*main-----------------------------------------------------------------------------------*/
+
+body.main {
+  height: 100%;
+}
+body.main #wrap {
+  height: 100%;
+}
+#container.main {
+  height: 100%;
+  background: #000;
+}
+#container.main .visual {
+  height: 100%;
+}
+#container.main .visual .canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#container.main .visual .slider {
+  height: 100%;
+}
+#container.main .visual .slider>li {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+#container.main .visual .slider>li .bg {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+#container.main .visual .slider>li.visual0 .copy .copy0 {
+  position: absolute;
+  left: 168px;
+  top: 281px;
+}
+#container.main .visual .slider>li.visual0 .copy .copy1 {
+  position: absolute;
+  left: 172px;
+  top: 559px;
+}
+#container.main .visual .slider>li.visual1 .copy .copy0 {
+  position: absolute;
+  left: 169px;
+  top: 272px;
+}
+#container.main .visual .slider>li.visual1 .copy .copy1 {
+  position: absolute;
+  left: 172px;
+  top: 559px;
+}
+#container.main .visual .dot {
+  position: absolute;
+  width: 100%;
+  bottom: 130px;
+  text-align: center;
+  line-height: 0;
+  z-index: 10;
+}
+#container.main .visual .dot>li {
+  display: inline-block;
+}
+#container.main .visual .dot>li>a {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.5;
+}
+#container.main .visual .dot>li.on>a {
+  opacity: 1;
+}
+#container.main .visual .arrow>a {
+  display: block;
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  font-size: 40px;
+  z-index: 10;
+}
+#container.main .visual .arrow>a.prev {
+  left: 30px;
+}
+#container.main .visual .arrow>a.next {
+  right: 30px;
+}
+
+/*sub_visual-----------------------------------------------------------------------------------*/
+
+.sub_visual {
+  height: 130px;
+  background: url('/resources/img/common/sub_visual.jpg') no-repeat center;
+}
+
+/*sub_title-----------------------------------------------------------------------------------*/
+
+.sub_title .text {
+  height: 153px;
+  line-height: 153px;
+  text-align: center;
+  color: #2ebdad;
+  font-family: 'NanumSquareB';
+  font-size: 35px;
+  letter-spacing: 30px;
+}
+
+/*content-----------------------------------------------------------------------------------*/
+
+.content {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto 100px;
+}
+
+/*common tab-----------------------------------------------------------------------------------*/
+
+.tab {}
+.tab>li {
+  float: left;
+  width: calc(1 / 3 * 100%);
+  border-width: 1px 1px 1px 0;
+  border-style: solid;
+  border-color: #b5b5b5;
+  transition: all 0.1s cubic-bezier(0.22, 0.61, 0.36, 0.1);
+}
+.tab>li:first-child {
+  border-left: 1px solid #b5b5b5;
+}
+.tab>li>a {
+  display: block;
+  height: 51px;
+  line-height: 51px;
+  text-align: center;
+  color: #555555;
+  font-size: 18px;
+  transition: color 0.1s cubic-bezier(0.22, 0.61, 0.36, 0.1);
+}
+.tab>li.on {
+  border-color: #2ebdad;
+  background: #2ebdad;
+}
+.tab>li.on>a {
+  color: #fff;
+}
+
+/*sub overview-----------------------------------------------------------------------------------*/
+
+#container.overview .content {}
+#container.overview .slide {
+  border: 1px solid #e4e4e4;
+}
+#container.overview .slide_thumb {
+  margin: 30px 0 50px;
+  text-align: center;
+}
+#container.overview .slide_thumb>li {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px;
+}
+#container.overview .slide_thumb>li>a .stroke {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  border: 5px solid transparent;
+  -webkit-transition: border 0.3s cubic-bezier(0.25, 0, 0, 1) 0s;
+  transition: border 0.3s cubic-bezier(0.25, 0, 0, 1) 0s;
+}
+#container.overview .slide_thumb>li.on>a .stroke {
+  border: 5px solid #3a98ec;
+}
+#container.overview .slide_thumb>li>a>img {
+  display: block;
+}
+
+/*sub interior-----------------------------------------------------------------------------------*/
+
+#container.interior .content {
+  border-top: 1px solid #e9e9e9;
+}
+#container.interior .content .tab {
+  margin-top: 60px;
+}
+#container.interior .content .tab>li {
+  width: calc(1 / 4 * 100%);
+}

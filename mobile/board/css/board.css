@@ -1,0 +1,38 @@
+/*board_table-----------------------------------------------------------------------------------*/
+
+.board { margin: 0 calc(20 / 25 * 1rem); }
+.board .board_table { width: 100%; border-top:2px solid #0072a5; }
+.board .board_table th,
+.board .board_table td { padding: calc(26 / 25 * 1rem) 0; border-bottom: 1px solid #d6d6d6; }
+.board .board_table th { background: #f4f4f4; }
+.board .board_table td { text-align: center; }
+.board .board_table td.tit { text-align: left; padding-left: 1.2rem; }
+.board .board_table td.tit>a { color: #000; }
+
+/*paging-----------------------------------------------------------------------------------*/
+
+.board .paging { padding: 2rem 0; text-align: center; clear: both; }
+.board .paging a { display: inline-block; width: 2rem; line-height: 2rem; border: 1px solid #ccc; background: #fff; margin: 0 2px; }
+.board .paging a.on { background: #006496; border: 1px solid #006496; color: #fff; }
+
+/* view */
+.boardView {}
+.boardView .viewTop { position: relative; }
+.boardView .viewTop:before { content: ''; width: 60px; height: 2px; background: #0072a5; position: absolute; left: 0; top: 0; }
+.boardView .viewTop dt { padding-top: 20px; font-size: calc(25 / 25 * 1rem); color: #222222; padding-bottom: 10px;}
+.boardView .viewTop dd { font-size: calc(20 / 25 * 1rem); overflow: hidden; height: 40px; line-height: 40px; position: relative;}
+.boardView .viewTop dd span { display: inline-block; font-size: calc(20 / 25 * 1rem);}
+.boardView .viewTop dd span.tit { color: #222; padding-right: 15px;}
+.boardView .viewTop dd span.tit.line { padding-left: 20px; position: relative; margin-left: 20px;}
+.boardView .viewTop dd span.tit.line:before { content: ''; width: 1px; height: 20px; background: #ddd; position: absolute; left: 0; top: 10px; }
+.boardView .viewTop dd span.tit.file {}
+.boardView .viewTop dd span.eye {background: url(../img/ico_view.gif) no-repeat 0 center; padding-left: 30px; position: absolute; right: 0;}
+.boardView .viewCon { border-top: 2px solid #0072a5; border-bottom: 1px solid #a0a0a0; padding: 50px 20px; line-height: 18px;}
+.boardView .viewBtm { overflow: hidden; width: 100%; padding: 20px 0; position: relative; height: 80px; line-height: 40px; border-top: 2px solid #a0a0a0; border-bottom: 2px solid #ebebeb;}
+.boardView .viewBtm .leftCon {width: 50%; position: absolute; left: 0; top: 20px; overflow: hidden;}
+.boardView .viewBtm .leftCon span { float: left; margin-right: 20px;}
+.boardView .viewBtm .rightCon {width: 50%; position: absolute; right: 0; top: 20px; overflow: hidden;}
+.boardView .viewBtm:before { content: ''; width: 1px; height: 20px; background: #ddd; position: absolute; left: 50%; top: 30px; margin-left: -20px; }
+.boardView .viewBtm .rightCon span {float: right;}
+.boardView .button { text-align: center; padding: 20px 0; clear: both; }
+.boardView .button > a { display: inline-block; width: 120px; height: 40px; background: #0072a5; color: #fff; font-size: calc(25 / 25 * 1rem); line-height: 40px; }

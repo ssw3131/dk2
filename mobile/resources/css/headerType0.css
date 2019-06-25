@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+/*header-----------------------------------------------------------------------------------*/
+
+#header {
+  background: #466175;
+}
+body.main #header {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  z-index: 10;
+}
+#header .top {
+  padding-bottom: calc(15 / 25 * 1rem);
+}
+#header .top .logo {
+  float: left;
+  width: calc(255 / 640 * 100%);
+  margin: calc(24 / 25 * 1rem) 0 0 calc(21 / 25 * 1rem);
+}
+#header .top .quick {
+  float: right;
+  width: calc(100 / 640 * 100%);
+  margin: calc(15 / 25 * 1rem) calc(15 / 25 * 1rem) 0 0;
+}
+#header .top .tel {
+  float: right;
+  width: calc(178 / 640 * 100%);
+  margin: calc(26 / 25 * 1rem) calc(19 / 25 * 1rem) 0 0;
+}
+
+/*gnb-----------------------------------------------------------------------------------*/
+
+.gnb {
+  position: relative;
+}
+.gnb .depth0 {
+  margin-bottom: calc(90 / 25 * 1rem); /*.gnb .depth1 높이*/
+}
+.gnb .depth0>li {
+  float: left;
+  width: calc(1 / 4 * 100%);
+  border-width: 1px 0 1px 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.3);
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 0, 0, 1) 0s;
+  transition: all 0.5s cubic-bezier(0.25, 0, 0, 1) 0s;
+}
+.gnb .depth0>li:first-child {
+  border-left: 0;
+}
+.gnb .depth0>li>a {
+  display: block;
+  height: calc(92 / 25 * 1rem);
+  line-height: calc(92 / 25 * 1rem);
+  text-align: center;
+  color: #fff;
+  font-size: calc(20 / 25 * 1rem);
+  font-weight: bold;
+}
+.gnb .depth0>li.on>a {
+  background: rgba(0, 0, 0, 0.3);
+  color: #c7fffa;
+}
+.gnb .depth1 {
+  display: none;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: calc(90 / 25 * 1rem); /*.gnb .depth0 margin-bottom*/
+  left: 0;
+  text-align: center;
+  background: #f8f8f8;
+  border-bottom: 1px solid #ebebeb;
+}
+.gnb .depth1>li {
+  display: inline-block;
+  padding: 0 calc(30 / 640 * 100%);
+}
+.gnb .depth1>li>a {
+  display: block;
+  height: calc(90 / 25 * 1rem);
+  line-height: calc(90 / 25 * 1rem);
+  color: #b7b6b6;
+  font-size: calc(20 / 25 * 1rem);
+}
+.gnb .depth1>li.on>a {
+  color: #1f1e1e;
+}

@@ -1,0 +1,19 @@
+/*board_table*/
+.board {}
+.board .board_table { width: 100%; border-top:2px solid #0072a5;}
+.board .board_table th,
+.board .board_table td { padding:13px 13px; border-bottom: 1px solid #d6d6d6; }
+.board .board_table th { background: #f4f4f4; color:#0072a5; }
+.board .board_table td { text-align:center; }
+.board .board_table td.tit { text-align:left; }
+.board .board_table td.tit>a:hover, .board .board_table td.tit>a:active { color:#0072a5; }
+.board .board_table td.text { padding:15px; text-align:left; line-height:18px; }
+
+/*paging*/
+.board .paging { padding-top:50px; text-align:center; clear:both; }
+.board .paging a { display:inline-block; width:38px; line-height:38px; border:1px solid #ccc; background:#fff; color:#666; margin:0 2px; }
+.board .paging a.on { background:#0072a5; border:1px soild #58492b; color:#fff; }
+
+/*bt*/
+.board .bt { text-align:center; margin-top: 30px; }
+.board .bt>a { display:inline-block; width:140px; text-align:center; line-height:50px; color:#fff; background:#0072a5; }

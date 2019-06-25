@@ -1,0 +1,78 @@
+<!--METADATA TYPE= "typelib"  NAME= "ADODB Type Library"
+      FILE="c:\Program Files\Common Files\SYSTEM\ADO\msado15.dll"  -->
+
+<SCRIPT LANGUAGE=VBScript RUNAT=Server>
+
+SUB Application_OnStart
+END SUB
+
+SUB Application_OnEnd
+END SUB
+
+SUB session_OnStart
+	''session.Timeout=300  ''300
+	Call pVisitCount_Add()
+END SUB
+
+
+Sub Session_OnEnd
+
+
+	Dim strCONN
+	Dim  objConn,strSESSIONID,strIP,strREFERER_URL
+
+	strCONN="Provider=SQLOLEDB.1;User ID=DK2;Password=ebiz69;Initial Catalog=DK2;Data Source=192.168.3.189;Persist Security Info=True;"
+
+
+	Set objConn=Server.CreateObject("ADODB.connection")
+	objConn.Open strCONN
+
+	strSESSIONID=Session("ssSESSIONID")
+	strUSER_ID=Trim(Session("ssUSER_ID"))
+
+	strSQL="update MIT_WEB_LOG set SESSION_END= getDate()  where SESSION_ID='" &  strSESSIONID &"'"
+	objConn.Execute strSQL,, adExecuteNoRecords
+
+	objConn.Close
+	set objConn=Nothing
+
+	Session.Abandon
+
+
+END SUB
+
+
+
+
+
+Sub pVisitCount_Add()
+
+	Dim rsv,strSQLv, nVISIT_CNTv, strTODAYv
+	Dim strCONN
+	Dim  objConn,strSESSIONID,strIP,strREFERER_URL
+
+	strCONN="Provider=SQLOLEDB.1;User ID=DK2;Password=ebiz69;Initial Catalog=DK2;Data Source=192.168.3.189;Persist Security Info=True;"
+
+	Set objConn=Server.CreateObject("ADODB.connection")
+	objConn.Open strCONN
+
+	strSESSIONID = Year(Date()) &    right("0" & Month(Date()),2) &  right("0" & Day(Date()),2) & right("00" & Hour(now()),2) &  right("00" & Minute(now()),2) &  "_" & Session.SessionID
+	Session("ssSESSIONID")= strSESSIONID
+
+	strIP=Request.ServerVariables("REMOTE_ADDR")
+	strREFERER_URL= Request.ServerVariables("HTTP_REFERER")
+	IF len(strREFERER_URL) >255 then
+		strREFERER_URL = left(strREFERER_URL,200)
+	END IF
+
+	strREFERER_URL = replace(strREFERER_URL,"'","`")
+
+	strSQL="insert into MIT_WEB_LOG  (SESSION_ID,IP,SESSION_START,REFERER_URL) values('" & strSESSIONID& "','" & strIP & "', getdate(),'" & strREFERER_URL & "') "
+	objConn.Execute strSQL,, adExecuteNoRecords
+
+	objConn.Close
+	set objConn=Nothing
+
+End sub
+
+</Script>

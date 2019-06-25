@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+/*header-----------------------------------------------------------------------------------*/
+
+#header {}
+#header .top {
+  height: calc(120 / 25 * 1rem);
+  background: #333;
+}
+#header .top .logo {
+  float: left;
+  width: calc(227 / 25 * 1rem);
+  margin: calc(33 / 25 * 1rem) 0 0 calc(30 / 25 * 1rem);
+}
+#header .top .mega {
+  float: right;
+  width: calc(50 / 25 * 1rem);
+  margin: calc(44 / 25 * 1rem) calc(30 / 25 * 1rem) 0 0;
+}
+#header .top .tel {
+  float: right;
+  width: calc(178 / 25 * 1rem);
+  margin: calc(38 / 25 * 1rem) calc(22 / 25 * 1rem) 0 0;
+}
+
+/*gnb-----------------------------------------------------------------------------------*/
+
+.gnb {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+}
+.gnb .gnb_in {
+  width: calc(427 / 25 * 1rem);
+  float: right;
+}
+.gnb .gnb_in .gnb_top {
+  height: calc(120 / 25 * 1rem);
+  background: #8d2233;
+}
+.gnb .gnb_in .gnb_top .close {
+  display: block;
+  width: calc(98 / 25 * 1rem);
+  padding: calc(41 / 25 * 1rem) calc(30 / 25 * 1rem);
+}
+.gnb .gnb_in .depth0 {
+  padding-bottom: calc(100 / 25 * 1rem);
+  background-color: #f5f5f5;
+}
+.gnb .gnb_in .depth0>li {
+  background-color: #fff;
+}
+.gnb .gnb_in .depth0>li>a {
+  display: block;
+  height: calc(100 / 25 * 1rem);
+  line-height: calc(100 / 25 * 1rem);
+  padding: 0 calc(60 / 25 * 1rem);
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-color: #dddddd;
+  text-align: right;
+  color: #000000;
+  font-size: calc(24 / 25 * 1rem);
+}
+.gnb .gnb_in .depth0>li.on>a {
+  font-family: 'notokr-bold';
+}
+.gnb .gnb_in .depth1 {}
+.gnb .gnb_in .depth1>li {
+  background-color: #fcfcfc;
+}
+.gnb .gnb_in .depth1>li>a {
+  display: block;
+  height: calc(60 / 25 * 1rem);
+  line-height: calc(60 / 25 * 1rem);
+  padding: 0 calc(60 / 25 * 1rem);
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-color: #dddddd;
+  text-align: right;
+  color: #000000;
+  font-size: calc(20 / 25 * 1rem);
+}
+.gnb .gnb_in .depth1>li.on>a {
+  font-family: 'notokr-bold';
+}
